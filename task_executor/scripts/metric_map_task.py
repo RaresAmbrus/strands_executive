@@ -41,9 +41,12 @@ if __name__ == '__main__':
                 pose_id = meta["_id"]
 
         # pose_id = '533e9d6154a6f71c18fade50'
-
-        task = Task(node_id='WayPoint1', action='ptu_pan_tilt_metric_map')
-        task_utils.add_object_id_argument(task, pose_id, scitos_ptu.msg.PanTiltGoal)
+	task_utils.add_string_argument(task, '-100')
+	task_utils.add_string_argument(task, '20')
+	task_utils.add_string_argument(task, '100')
+	task_utils.add_string_argument(task, '-30')
+	task_utils.add_string_argument(task, '15')
+	task_utils.add_string_argument(task, '30')
 
         print task
 
